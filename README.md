@@ -23,7 +23,8 @@ Built for simplicity, precision, and creativity — it showcases how basic hardw
 ---
 
 ## 🖼️ Wiring Diagram
-![Wiring Diagram](assets/wiring-diagram.png)
+<img width="2575" height="1604" alt="auto_clicker" src="https://github.com/user-attachments/assets/c86956bb-09ef-4b20-b7cd-07b944501bd2" />
+
 
 ---
 
@@ -35,3 +36,10 @@ Built for simplicity, precision, and creativity — it showcases how basic hardw
 ---
 
 ## 🧩 File Structure
+Auto-Clicker/
+│
+├── index.html
+├──Auto_clicker.ino
+├── assets/
+│ └── wiring-diagram.png
+└── README.md
