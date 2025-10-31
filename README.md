@@ -35,11 +35,3 @@ Built for simplicity, precision, and creativity — it showcases how basic hardw
 
 ---
 
-## 🧩 File Structure
-Auto-Clicker/
-│
-├── index.html
-├──Auto_clicker.ino
-├── assets/
-│ └── wiring-diagram.png
-└── README.md
