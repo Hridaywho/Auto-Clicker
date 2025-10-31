@@ -1,77 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Auto Clicker</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
     body {
       font-family: 'Poppins', sans-serif;
       background: radial-gradient(circle at top, #0f172a, #020617);
       color: #f8fafc;
       text-align: center;
-      padding: 60px 20px;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
     }
+
+    header {
+      padding: 80px 20px 30px;
+      animation: fadeIn 1.5s ease;
+    }
+
     h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
       color: #38bdf8;
-      text-shadow: 0 0 20px rgba(56,189,248,0.4);
+      text-shadow: 0 0 30px rgba(56,189,248,0.4);
+      letter-spacing: 1px;
+      margin-bottom: 15px;
     }
-    p {
-      max-width: 750px;
-      margin: 25px auto;
-      font-size: 1.15rem;
-      line-height: 1.8;
-      color: #cbd5e1;
+
+    p.subtitle {
+      color: #94a3b8;
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      animation: fadeIn 2s ease;
     }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      animation: slideUp 1.5s ease;
+    }
+
     img {
-      max-width: 420px;
-      border-radius: 20px;
+      max-width: 80%;
+      border-radius: 18px;
       margin: 40px 0;
-      box-shadow: 0 0 40px rgba(56,189,248,0.3);
-      transition: transform 0.3s ease;
+      box-shadow: 0 0 45px rgba(56,189,248,0.3);
+      transition: all 0.4s ease;
+      border: 2px solid rgba(56,189,248,0.4);
     }
+
     img:hover {
       transform: scale(1.05);
+      box-shadow: 0 0 70px rgba(56,189,248,0.5);
     }
+
+    .buttons {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
     a {
       display: inline-block;
-      margin-top: 20px;
-      padding: 14px 30px;
+      padding: 14px 36px;
       background: linear-gradient(90deg, #38bdf8, #0ea5e9);
       color: #0f172a;
-      border-radius: 12px;
+      border-radius: 14px;
       text-decoration: none;
       font-weight: 600;
       font-size: 1.05rem;
-      transition: all 0.3s;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(14,165,233,0.3);
     }
+
     a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(14,165,233,0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(14,165,233,0.5);
     }
+
     footer {
-      margin-top: 70px;
+      margin-top: 90px;
+      padding: 40px 0;
       color: #94a3b8;
-      font-size: 0.9rem;
-      letter-spacing: 0.4px;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      background: rgba(255, 255, 255, 0.03);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <h1>⚙️ Auto Clicker</h1>
-  <p>
-    A fun and functional project built using an <b>Arduino</b> and an <b>SG90 Servo Motor</b> that automatically presses your keyboard’s <b>spacebar</b>.
-    Designed for simplicity, reliability, and just the right touch of tech aesthetic.
-  </p>
+  <header>
+    <h1>⚙️ Auto Clicker</h1>
+    <p class="subtitle">An elegant Arduino-powered servo automation project</p>
+  </header>
 
-  <img src="assets/wiring-diagram.png" alt="Wiring Diagram">
+  <main>
+    <p>
+      <b>Auto Clicker</b> is a simple and precise hardware project built using an <b>Arduino</b> and an <b>SG90 Servo Motor</b>. 
+      It automatically presses the spacebar key, blending creativity and automation with minimal setup.
+    </p>
 
-  <a href="https://github.com/Hridaywho/Auto-Clicker" target="_blank">🚀 View Project on GitHub</a>
+    <img src="./assets/wiring-diagram.png" alt="Wiring Diagram">
+
+    <div class="buttons">
+      <a href="https://github.com/Hridaywho/Auto-Clicker" target="_blank">🚀 View on GitHub</a>
+      <a href="https://hridaywho.github.io/Auto-Clicker/" target="_blank">🌐 Live Demo</a>
+    </div>
+  </main>
 
   <footer>
-    <p>Crafted with ❤️ by Hriday D.</p>
+    <p>Crafted with ❤️ by <b>Hriday</b></p>
   </footer>
 </body>
 </html>
